@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trio Consultoria e Serviços</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.6s ease forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .hidden-lang {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-xl"><img src="reg.jpeg"/></span>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-800">Trio Consultoria</h1>
+                        <p class="text-sm text-gray-600" data-pt="e Serviços" data-en="& Services">e Serviços</p>
+                    </div>
+                </div>
+                
+                <!-- Language Toggle -->
+                <div class="flex items-center space-x-4">
+                    <button onclick="toggleLanguage()" class="bg-blue-600 text-white px-3 py-1 rounded-md text-sm hover:bg-blue-700 transition-colors">
+                        <span id="lang-toggle">EN</span>
+                    </button>
+                    <nav class="hidden md:flex space-x-6">
+                        <a href="#home" class="text-gray-700 hover:text-blue-600 transition-colors" data-pt="Início" data-en="Home">Início</a>
+                        <a href="#services" class="text-gray-700 hover:text-blue-600 transition-colors" data-pt="Serviços" data-en="Services">Serviços</a>
+                        <a href="#about" class="text-gray-700 hover:text-blue-600 transition-colors" data-pt="Sobre Nós" data-en="About">Sobre Nós</a>
+                        <a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors" data-pt="Contacto" data-en="Contact">Contacto</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <div class="fade-in">
+                <h2 class="text-4xl md:text-6xl font-bold mb-6" data-pt="Soluções Profissionais em Consultoria" data-en="Professional Consulting Solutions">Soluções Profissionais em Consultoria</h2>
+                <p class="text-xl md:text-2xl mb-8 opacity-90" data-pt="Contabilidade e Despacho Aduaneiro de Excelência" data-en="Excellence in Accounting and Customs Clearance">Contabilidade e Despacho Aduaneiro de Excelência</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#contact" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors" data-pt="Solicitar Consulta" data-en="Request Consultation">Solicitar Consulta</a>
+                    <a href="#services" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors" data-pt="Os Nossos Serviços" data-en="Our Services">Os Nossos Serviços</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-pt="Os Nossos Serviços" data-en="Our Services">Os Nossos Serviços</h3>
+                <p class="text-gray-600 text-lg" data-pt="Oferecemos soluções completas para as suas necessidades empresariais" data-en="We offer complete solutions for your business needs">Oferecemos soluções completas para as suas necessidades empresariais</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Accounting Service -->
+                <div class="card-hover bg-gray-50 p-8 rounded-xl border">
+                    <div class="w-16 h-16 bg-blue-600 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-calculator text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-800 mb-4" data-pt="Consultoria Contabilística" data-en="Accounting Consulting">Consultoria Contabilística</h4>
+                    <p class="text-gray-600 mb-6" data-pt="Serviços completos de contabilidade, incluindo planeamento fiscal, análise financeira e conformidade tributária para empresas de todos os portes." data-en="Complete accounting services, including tax planning, financial analysis and tax compliance for companies of all sizes.">Serviços completos de contabilidade, incluindo planeamento fiscal, análise financeira e conformidade tributária para empresas de todos os portes.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check text-blue-600 mr-2"></i><span data-pt="Planeamento Tributário" data-en="Tax Planning">Planeamento Tributário</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-blue-600 mr-2"></i><span data-pt="Análise Financeira" data-en="Financial Analysis">Análise Financeira</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-blue-600 mr-2"></i><span data-pt="Conformidade Fiscal" data-en="Tax Compliance">Conformidade Fiscal</span></li>
+                    </ul>
+                </div>
+
+                <!-- Customs Service -->
+                <div class="card-hover bg-gray-50 p-8 rounded-xl border">
+                    <div class="w-16 h-16 bg-blue-600 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-ship text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-800 mb-4" data-pt="Despacho Aduaneiro" data-en="Customs Clearance">Despacho Aduaneiro</h4>
+                    <p class="text-gray-600 mb-6" data-pt="Especialistas em comércio externo, facilitamos os seus processos de importação e exportação com eficiência e conformidade total." data-en="Foreign trade specialists, we facilitate your import and export processes with efficiency and full compliance.">Especialistas em comércio externo, facilitamos os seus processos de importação e exportação com eficiência e conformidade total.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check text-blue-600 mr-2"></i><span data-pt="Importação e Exportação" data-en="Import and Export">Importação e Exportação</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-blue-600 mr-2"></i><span data-pt="Classificação Pautal" data-en="Fiscal Classification">Classificação Pautal</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-blue-600 mr-2"></i><span data-pt="Documentação Aduaneira" data-en="Customs Documentation">Documentação Aduaneira</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8" data-pt="Sobre a Trio Consultoria" data-en="About Trio Consultoria">Sobre a Trio Consultoria</h3>
+                <p class="text-lg text-gray-600 mb-8" data-pt="Com anos de experiência no mercado, a Trio Consultoria e Serviços é referência em soluções contabilísticas e de comércio externo. A nossa equipa especializada oferece atendimento personalizado e soluções eficientes para empresas que procuram excelência em gestão fiscal e aduaneira." data-en="With years of experience in the market, Trio Consultoria e Serviços is a reference in accounting and foreign trade solutions. Our specialized team offers personalized service and efficient solutions for companies seeking excellence in tax and customs management.">Com anos de experiência no mercado, a Trio Consultoria e Serviços é referência em soluções contabilísticas e de comércio externo. A nossa equipa especializada oferece atendimento personalizado e soluções eficientes para empresas que procuram excelência em gestão fiscal e aduaneira.</p>
+                
+                <div class="grid md:grid-cols-3 gap-8 mt-12">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-users text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-2" data-pt="Equipa Especializada" data-en="Specialized Team">Equipa Especializada</h4>
+                        <p class="text-gray-600" data-pt="Profissionais qualificados e experientes" data-en="Qualified and experienced professionals">Profissionais qualificados e experientes</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-clock text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-2" data-pt="Atendimento Ágil" data-en="Fast Service">Atendimento Ágil</h4>
+                        <p class="text-gray-600" data-pt="Respostas rápidas e eficientes" data-en="Fast and efficient responses">Respostas rápidas e eficientes</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-shield-alt text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-2" data-pt="Conformidade Total" data-en="Full Compliance">Conformidade Total</h4>
+                        <p class="text-gray-600" data-pt="Cumprimos todas as normas e regulamentações" data-en="We follow all norms and regulations">Cumprimos todas as normas e regulamentações</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-pt="Entre em Contacto" data-en="Get in Touch">Entre em Contacto</h3>
+                <p class="text-gray-600 text-lg" data-pt="Estamos prontos para ajudar a sua empresa a crescer" data-en="We are ready to help your company grow">Estamos prontos para ajudar a sua empresa a crescer</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-2xl font-bold text-gray-800 mb-6" data-pt="Informações de Contacto" data-en="Contact Information">Informações de Contacto</h4>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-envelope text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-800">Email</p>
+                                <a href="mailto:trioconsultoria2023@gmail.com" class="text-blue-600 hover:text-blue-700">trioconsultoria2023@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-phone text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-800" data-pt="Telefone" data-en="Phone">Telefone</p>
+                                <a href="tel:867338632" class="text-blue-600 hover:text-blue-700">867 338 632</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
+                                <i class="fab fa-whatsapp text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-800">WhatsApp</p>
+                                <a href="https://wa.me/827160109" class="text-green-600 hover:text-green-700" target="_blank">827 160 109</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <h4 class="text-2xl font-bold text-gray-800 mb-6" data-pt="Solicite uma Consulta" data-en="Request a Consultation">Solicite uma Consulta</h4>
+                    
+                    <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-info-circle text-blue-600"></i>
+                            <span class="text-blue-800 font-medium" data-pt="Formulário de Demonstração" data-en="Demo Form">Formulário de Demonstração</span>
+                        </div>
+                        <p class="text-blue-700 text-sm mt-1" data-pt="Este é um formulário de exemplo. Para implementar o envio real de emails, será necessária configuração de servidor." data-en="This is a sample form. To implement real email sending, server configuration will be required.">Este é um formulário de exemplo. Para implementar o envio real de emails, será necessária configuração de servidor.</p>
+                    </div>
+                    
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2" data-pt="Nome Completo" data-en="Full Name">Nome Completo</label>
+                            <input type="text" id="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Email</label>
+                            <input type="email" id="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2" data-pt="Telefone" data-en="Phone">Telefone</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2" data-pt="Serviço de Interesse" data-en="Service of Interest">Serviço de Interesse</label>
+                            <select id="service" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                                <option value="" data-pt="Seleccione um serviço" data-en="Select a service">Seleccione um serviço</option>
+                                <option value="contabilidade" data-pt="Consultoria Contabilística" data-en="Accounting Consulting">Consultoria Contabilística</option>
+                                <option value="aduaneiro" data-pt="Despacho Aduaneiro" data-en="Customs Clearance">Despacho Aduaneiro</option>
+                                <option value="ambos" data-pt="Ambos os Serviços" data-en="Both Services">Ambos os Serviços</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2" data-pt="Mensagem" data-en="Message">Mensagem</label>
+                            <textarea id="message" rows="4" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent" data-pt="Descreva as suas necessidades..." data-en="Describe your needs..." placeholder="Descreva as suas necessidades..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                            <span data-pt="Enviar Consulta" data-en="Send Consultation">Enviar Consulta</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold"><img src="reg.jpeg"/></span>
+                        </div>
+                        <div>
+                            <h5 class="font-bold">Trio Consultoria</h5>
+                            <p class="text-sm text-gray-400" data-pt="e Serviços" data-en="& Services">e Serviços</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400" data-pt="Soluções profissionais em contabilidade e despacho aduaneiro." data-en="Professional solutions in accounting and customs clearance.">Soluções profissionais em contabilidade e despacho aduaneiro.</p>
+                </div>
+                
+                <div>
+                    <h5 class="font-bold mb-4" data-pt="Serviços" data-en="Services">Serviços</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li data-pt="Consultoria Contabilística" data-en="Accounting Consulting">Consultoria Contabilística</li>
+                        <li data-pt="Despacho Aduaneiro" data-en="Customs Clearance">Despacho Aduaneiro</li>
+                        <li data-pt="Planeamento Tributário" data-en="Tax Planning">Planeamento Tributário</li>
+                        <li data-pt="Comércio Externo" data-en="Foreign Trade">Comércio Externo</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h5 class="font-bold mb-4" data-pt="Contacto" data-en="Contact">Contacto</h5>
+                    <div class="space-y-2 text-gray-400">
+                        <p>trioconsultoria2023@gmail.com</p>
+                        <p>Tel: 867 338 632</p>
+                        <p>WhatsApp: 827 160 109</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Trio Consultoria e Serviços. <span data-pt="Todos os direitos reservados." data-en="All rights reserved.">Todos os direitos reservados.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let currentLang = 'pt';
+        
+        function toggleLanguage() {
+            currentLang = currentLang === 'pt' ? 'en' : 'pt';
+            const langToggle = document.getElementById('lang-toggle');
+            langToggle.textContent = currentLang === 'pt' ? 'EN' : 'PT';
+            
+            // Update all elements with data attributes
+            const elements = document.querySelectorAll('[data-pt][data-en]');
+            elements.forEach(element => {
+                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                    element.placeholder = element.getAttribute('data-' + currentLang);
+                } else if (element.tagName === 'OPTION') {
+                    element.textContent = element.getAttribute('data-' + currentLang);
+                } else {
+                    element.textContent = element.getAttribute('data-' + currentLang);
+                }
+            });
+        }
+        
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                service: document.getElementById('service').value,
+                message: document.getElementById('message').value
+            };
+            
+            // Create mailto link
+            const subject = currentLang === 'pt' ? 'Consulta de Serviços - Trio Consultoria' : 'Service Consultation - Trio Consultoria';
+            const body = currentLang === 'pt' ? 
+                `Nome: ${formData.name}\nEmail: ${formData.email}\nTelefone: ${formData.phone}\nServiço: ${formData.service}\n\nMensagem:\n${formData.message}` :
+                `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nService: ${formData.service}\n\nMessage:\n${formData.message}`;
+            
+            const mailtoLink = `mailto:trioconsultoria2023@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.location.href = mailtoLink;
+            
+            // Show success message
+            const successMsg = currentLang === 'pt' ? 
+                'Obrigado! O seu cliente de email será aberto para enviar a consulta.' : 
+                'Thank you! Your email client will open to send the consultation.';
+            alert(successMsg);
+            
+            // Reset form
+            this.reset();
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe sections for animation
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96f90e5e963873c1',t:'MTc1NTI2NDcyNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
